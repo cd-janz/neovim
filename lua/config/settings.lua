@@ -1,4 +1,3 @@
-local global = vim.g
 local o = vim.opt
 
 o.number = true
@@ -14,12 +13,12 @@ o.encoding = "UTF-8"
 vim.o.mousemoveevent = true
 
 vim.diagnostic.config({
-	virtual_text = {
-		prefix = "󰙎",
-		spacing = 4,
-	},
-	signs = true,
-	underline = true,
-	update_in_insert = false,
-	severity_sort = true,
+  virtual_text = {
+    prefix = "󰙎",
+    spacing = 4,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
 })
