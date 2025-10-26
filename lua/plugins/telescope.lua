@@ -9,6 +9,7 @@ return {
     {
       "nvim-treesitter/nvim-treesitter",
       lazy = false,
+      event = "VimEnter",
       branch = "main",
       build = ":TSUpdate",
       opts = {

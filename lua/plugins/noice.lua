@@ -2,7 +2,7 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   dependencies = {
-    "MinifTanjim/nui.nvim",
+    "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify"
   },
   opts = {
