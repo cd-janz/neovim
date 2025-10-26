@@ -82,7 +82,7 @@ return {
       position = "left",
       width = 42,
       mapping = {
-        ["P"]  = {
+        ["P"] = {
           "toggle_preview",
           config = {
             use_float = false,
