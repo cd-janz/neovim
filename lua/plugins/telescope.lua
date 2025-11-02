@@ -1,6 +1,7 @@
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  tag = "0.1.8",
+  branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "BurntSushi/ripgrep",
@@ -14,8 +15,7 @@ return {
       build = ":TSUpdate",
       opts = {
         ensure_installed = {
-          "lua",
-          "ini",
+          "lua", "ini", "javascript", "typescript", "tsx", "html", "css", "json", "astro", "scss"
         },
         highlight = { enable = true },
         indent = { enable = true },
@@ -26,6 +26,13 @@ return {
   config = function()
     local telescope = require("telescope")
     telescope.setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-h>"] = "which_key"
+          }
+        }
+      },
       extensions = {
         fzy_native = {
           fuzzy = true,

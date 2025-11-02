@@ -26,15 +26,14 @@ for i = 1, 9 do
   end)
 end
 --- HOVER
-vim.keymap.set("n", "K", require("hover").hover, { desc = "hover.nvim" })
-vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
+vim.keymap.set("n", "K", require("hover").open, { desc = "hover.nvim" })
 vim.keymap.set("n", "<C-p>", function()
-  require("hover").hover_switch("previous")
+  require("hover").switch("previous")
 end, { desc = "hover.nvim (previous source)" })
 vim.keymap.set("n", "<C-n>", function()
-  require("hover").hover_switch("next")
+  require("hover").switch("next")
 end, { desc = "hover.nvim (next source)" })
-vim.keymap.set("n", "<MouseMove>", require("hover").hover_mouse, { desc = "hover.nvim (mouse)" })
+vim.keymap.set("n", "<MouseMove>", require("hover").mouse, { desc = "hover.nvim (mouse)" })
 --- TELESCOPE
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -46,9 +45,15 @@ vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
 vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
 vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
 vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
--- moving between splits
+--- moving between splits
 vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
 vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
 vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
 vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
 vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+--- DAP
+vim.keymap.set("n", "<leader>bp", ":DapToggleBreakpoint<CR>")
+vim.keymap.set("n", "<leader>ds", ":DapNew<CR>")
+vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>")
+vim.keymap.set("n", "<leader>do", ":DapStepOver<CR>")
+vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>")
