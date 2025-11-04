@@ -26,6 +26,7 @@ return {
 					"tailwindcss",
 					"ts_ls",
 					"basedpyright",
+					"texlab",
 				},
 				automatic_enable = true,
 			},
@@ -61,6 +62,7 @@ return {
 					scss = { "biome" },
 					astro = { "biome" },
 					python = { "ruff" },
+					tex = { "tex-fmt" },
 				},
 				default_format_opts = {
 					lsp_format = "fallback",
@@ -79,6 +81,7 @@ return {
 					"go-debug-adapter",
 					"biome",
 					"ruff",
+					"tex-fmt",
 				},
 				auto_update = true,
 				run_on_start = true,
